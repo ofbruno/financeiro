@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 
 class ButtonApp extends StatelessWidget {
   final String label;
-  final double fontSizeResposivo;
   final FocusNode focusNode;
   final void Function() onPressed;
   final Color color;
   final Color labelColor;
-  final Color borderColor;
   final double marginTop;
   final double marginBottom;
   final bool outlineButton;
@@ -24,12 +22,10 @@ class ButtonApp extends StatelessWidget {
 
   ButtonApp({
     this.label,
-    this.fontSizeResposivo = 14,
     this.focusNode,
     this.onPressed,
     this.color,
     this.labelColor = Colors.white,
-    this.borderColor,
     this.marginTop,
     this.marginBottom = 0.0,
     this.outlineButton = false,
@@ -89,7 +85,6 @@ class ButtonApp extends StatelessWidget {
 
   Widget _criarBotao(double tamanhoSpinner, double larguraBotao, Color cor) {
     MaterialButton botao;
-    List<Widget> textoIcone;
     Text textBotao = _criarTextoBotao();
     Widget spinner = _criarSpinnerBotao(tamanhoSpinner);
     Widget icone;
@@ -124,7 +119,7 @@ class ButtonApp extends StatelessWidget {
             borderRadius: new BorderRadius.circular(this.borderRadius),
           ),
           borderSide: BorderSide(
-            color: this.borderColor ?? this.labelColor,
+            color: this.labelColor,
           ),
           color: cor,
           focusColor: cor,
@@ -138,7 +133,7 @@ class ButtonApp extends StatelessWidget {
             borderRadius: new BorderRadius.circular(this.borderRadius),
           ),
           borderSide: BorderSide(
-            color: this.borderColor,
+            color: this.labelColor,
           ),
           color: cor,
           focusColor: cor,
@@ -190,7 +185,7 @@ class ButtonApp extends StatelessWidget {
       style: TextStyle(
         color: this.labelColor,
         fontWeight: FontWeight.w400,
-        fontSize: Responsivo.fonte(this.fontSizeResposivo),
+        //fontSize: Responsivo.fonte(this.fontSizeResposivo),
       ),
     );
   }

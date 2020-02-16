@@ -25,7 +25,7 @@ class _LoginViewState extends BaseViewState<LoginView> {
   final FocusNode _focusPassword = new FocusNode();
   final FocusNode _focusButton = new FocusNode();
   var _vm = new LoginViewModel();
-  MaterialColor _showHidePasswordColor = Colors.grey;
+  Color _showHidePasswordColor = Colors.grey;
   bool _showHidePassword = false;
   ScrollController _scrollController = new ScrollController(initialScrollOffset: 0.0);
 
@@ -107,16 +107,16 @@ class _LoginViewState extends BaseViewState<LoginView> {
         suffixIcon: IconButton(
           icon: Icon(
             FontAwesomeIcons.eye,
-            //size: Responsivo.fonte(16),
+            size: Responsivo.fonte(18),
             color: _showHidePasswordColor,
           ),
           onPressed: () {
             setState(() {
               _showHidePassword = !_showHidePassword;
               if (_showHidePassword)
-                _showHidePasswordColor = Colors.grey;
-              else
                 _showHidePasswordColor = Theme.of(context).primaryColor;
+              else
+                _showHidePasswordColor = Colors.grey;
             });
           },
         ),
