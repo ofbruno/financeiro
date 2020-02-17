@@ -1,14 +1,14 @@
 // import 'package:financeiro/utils/responsivo.dart';
 import 'package:flutter/material.dart';
 
-class ViewSettingsToolbar {
+class ViewSettingsAppBar {
   final bool visible;
   final Widget toolbarLeading;
   final List<Widget> toolbarActions;
   final Color toolbarTextColor;
   final Color toolbarColor;
 
-  ViewSettingsToolbar({
+  ViewSettingsAppBar({
     this.visible = true,
     this.toolbarLeading,
     this.toolbarActions,
@@ -18,16 +18,13 @@ class ViewSettingsToolbar {
 }
 
 class ViewSettings {
-  final String viewTitle;
-  final ViewSettingsToolbar toolbar;
+  //final String viewTitle;
+  final ViewSettingsAppBar appBar;
   final Color backgroundColor;
-  // final double paddingHorizontal;
-  // final double paddingVertical;
-  // final bool noPadding;
 
   ViewSettings({
-    this.viewTitle,
-    this.toolbar,
+    //this.viewTitle,
+    this.appBar,
     this.backgroundColor,
   });
 }

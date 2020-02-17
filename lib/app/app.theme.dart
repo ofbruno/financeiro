@@ -4,14 +4,22 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static final themeLight = ThemeData(
     colorScheme: _colorSchemeLight,
+    fontFamily: 'Roboto',
     appBarTheme: AppBarTheme(
-      color: _colorSchemeLight.primary,
+      color: _colorSchemeLight.onSurface,
       iconTheme: IconThemeData(
         color: _colorSchemeLight.onPrimary,
       ),
+      textTheme: TextTheme(
+        title: TextStyle(
+          fontWeight: FontWeight.w300,
+          fontSize: 21,
+          color: _colorSchemeLight.onPrimary,
+        ),
+      ),
     ),
     bottomAppBarTheme: BottomAppBarTheme(
-      color: _colorSchemeLight.primary,
+      color: _colorSchemeLight.surface,
     ),
     buttonTheme: ButtonThemeData(
       textTheme: ButtonTextTheme.primary,
@@ -36,6 +44,7 @@ class AppTheme {
     accentColor: _colorSchemeLight.primary,
     backgroundColor: _colorSchemeLight.background,
     scaffoldBackgroundColor: _colorSchemeLight.background,
+    errorColor: _colorSchemeLight.error,
     snackBarTheme: SnackBarThemeData(
       behavior: SnackBarBehavior.floating,
     ),
@@ -86,18 +95,18 @@ class AppTheme {
   );
 
   static const _colorSchemeLight = ColorScheme(
-    primary: Color(0xFF075E54),
-    primaryVariant: Color(0xFF128C7E),
-    secondary: Color(0xFFFF5722),
-    secondaryVariant: Color(0xFFFF5722),
+    primary: Colors.black,
+    primaryVariant: Colors.white,
+    secondary: Color(0xFF0f4c75),
+    secondaryVariant: Color(0xFFbbe1fa),
     background: Colors.white,
-    surface: Color(0xFFECE5DD),
+    surface: Colors.white,
     onBackground: Color(0xFF455A64),
     onSurface: Color(0xFF455A64),
-    error: Colors.red,
+    error: Colors.orange,
     onError: Colors.white,
     onPrimary: Colors.white,
-    onSecondary: Colors.white,
+    onSecondary: Colors.black,
     brightness: Brightness.light,
   );
 

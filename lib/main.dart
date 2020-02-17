@@ -10,6 +10,7 @@ void main() {
     environment: EAmbiente.DESENVOLVIMENTO,
     urlBaseApi: 'https://api.eventosgofree.com/v1/api/',
     theme: AppTheme.themeLight,
+    darkTheme: AppTheme.themeDark,
     analyticsEnabled: false,
     child: new App(),
   );

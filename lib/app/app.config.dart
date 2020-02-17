@@ -9,6 +9,7 @@ class AppConfig extends InheritedWidget {
     @required this.environment,
     @required this.urlBaseApi,
     @required this.theme,
+    @required this.darkTheme,
     @required this.analyticsEnabled,
   }) : super(child: child);
 
@@ -16,6 +17,7 @@ class AppConfig extends InheritedWidget {
   final EAmbiente environment;
   final String urlBaseApi;
   final ThemeData theme;
+  final ThemeData darkTheme;
   final bool analyticsEnabled;
 
   static AppConfig of(BuildContext context) {

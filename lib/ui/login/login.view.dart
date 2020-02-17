@@ -1,3 +1,4 @@
+import 'package:financeiro/app/app.router.dart';
 import 'package:financeiro/bases/base_stateful.view.dart';
 import 'package:financeiro/bases/view_settings.dart';
 import 'package:financeiro/ui/login/login.controller.dart';
@@ -43,7 +44,7 @@ class _LoginViewState extends BaseViewState<LoginView> {
   @override
   ViewSettings viewSettings() {
     return ViewSettings(
-      toolbar: ViewSettingsToolbar(
+      appBar: ViewSettingsAppBar(
         visible: false,
       ),
     );
@@ -166,7 +167,7 @@ class _LoginViewState extends BaseViewState<LoginView> {
       bool sucesso = await widget.controller.loginWithEmail(_vm);
 
       if (sucesso) {
-        //TODO: navegar para home
+        Navigator.pushNamed(context, AppRouter.home);
       }
     }
   }

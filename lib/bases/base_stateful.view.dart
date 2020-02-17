@@ -1,7 +1,7 @@
 import 'package:financeiro/bases/base.controller.dart';
 import 'package:financeiro/bases/view_settings.dart';
 import 'package:financeiro/utils/responsivo.dart';
-import 'package:financeiro/widgets/app/toolbar.widget.dart';
+import 'package:financeiro/widgets/app/appbar.widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +12,7 @@ abstract class BaseViewStateful<Controller extends BaseController> extends State
 }
 
 abstract class BaseViewState<View extends BaseViewStateful> extends State<View> {
+  String title() => '';
   ViewSettings viewSettings() => ViewSettings();
   FloatingActionButton floatingActionButton() => null;
   Widget body();
@@ -41,11 +42,11 @@ abstract class BaseViewState<View extends BaseViewStateful> extends State<View> 
     );
   }
 
-  ToolbarApp _toolbarApp() {
-    if (viewSettings().toolbar == null || viewSettings().toolbar.visible) {
-      return ToolbarApp(
-        title: viewSettings().viewTitle,
-        backgroundColor: viewSettings().toolbar?.toolbarColor,
+  AppBarApp _toolbarApp() {
+    if (viewSettings().appBar == null || viewSettings().appBar.visible) {
+      return AppBarApp(
+        title: title(),
+        backgroundColor: viewSettings().appBar?.toolbarColor,
       );
     }
 

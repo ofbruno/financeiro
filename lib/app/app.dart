@@ -22,6 +22,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppConfig.of(context).appName,
       theme: AppConfig.of(context).theme,
+      darkTheme: AppConfig.of(context).darkTheme,
       home: SplashView(),
       onGenerateRoute: AppRouter.generateRoute,
       //navigatorKey: NavigationProvider.instancia.navigatorKey,

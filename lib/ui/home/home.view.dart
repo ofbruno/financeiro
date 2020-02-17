@@ -1,4 +1,5 @@
 import 'package:financeiro/bases/base_stateful.view.dart';
+import 'package:financeiro/bases/view_settings.dart';
 import 'package:financeiro/ui/home/home.controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,9 @@ class HomeView extends BaseViewStateful<HomeControler> {
 
 class _HomeViewState extends BaseViewState<HomeView> {
   @override
+  String title() => 'Home';
+
+  @override
   void initState() {
     super.initState();
   }
@@ -23,8 +27,8 @@ class _HomeViewState extends BaseViewState<HomeView> {
 
   @override
   Widget body() {
-    return Column(
-      children: <Widget>[Text('Sejam bem-vindos')],
+    return SingleChildScrollView(
+      child: Container(),
     );
   }
 
