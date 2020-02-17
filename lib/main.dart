@@ -9,7 +9,7 @@ void main() {
     appName: 'Controle Financeiro',
     environment: EAmbiente.DESENVOLVIMENTO,
     urlBaseApi: 'https://api.eventosgofree.com/v1/api/',
-    theme: AppTheme.theme,
+    theme: AppTheme.themeLight,
     analyticsEnabled: false,
     child: new App(),
   );

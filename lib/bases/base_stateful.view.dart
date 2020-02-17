@@ -1,7 +1,7 @@
 import 'package:financeiro/bases/base.controller.dart';
 import 'package:financeiro/bases/view_settings.dart';
 import 'package:financeiro/utils/responsivo.dart';
-import 'package:financeiro/widgets/toolbar.widget.dart';
+import 'package:financeiro/widgets/app/toolbar.widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

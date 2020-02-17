@@ -3,11 +3,10 @@ import 'package:financeiro/bases/view_settings.dart';
 import 'package:financeiro/ui/login/login.controller.dart';
 import 'package:financeiro/ui/login/login.viewmodel.dart';
 import 'package:financeiro/utils/responsivo.dart';
-import 'package:financeiro/widgets/button.widget.dart';
-import 'package:financeiro/widgets/button_facebook.widget.dart';
-import 'package:financeiro/widgets/button_google.widget.dart';
-import 'package:financeiro/widgets/link_button.widget.dart';
-import 'package:financeiro/widgets/textform.widget.dart';
+import 'package:financeiro/widgets/app/button.widget.dart';
+import 'package:financeiro/widgets/app/button_facebook.widget.dart';
+import 'package:financeiro/widgets/app/button_google.widget.dart';
+import 'package:financeiro/widgets/app/textform.widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -134,15 +133,17 @@ class _LoginViewState extends BaseViewState<LoginView> {
 
   Widget _enterButton() {
     return ButtonApp(
-      label: 'Entrar com e-mail',
+      caption: 'Entrar com e-mail',
       onPressed: _validateCredentials,
     );
   }
 
   Widget _forgetPasswordButton() {
-    return LinkButtonApp(
-      label: 'Esqueci minha senha',
-      onTap: () => widget.controller.rememberPassword(_vm.login),
+    return ButtonApp(
+      caption: 'Esqueci minha senha',
+      flat: true,
+      marginBottom: 10,
+      onPressed: () => widget.controller.rememberPassword(_vm.login),
     );
   }
 
